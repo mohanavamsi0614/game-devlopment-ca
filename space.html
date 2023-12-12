@@ -5,9 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url("./assets/space.gif");
+            background-size: cover;
+        }
+        .ship{
+            width: 10%;
+            border: 1px solid red;
+        }
+        img{
+            width: 100%;
+        }
+        #left{
+            position:absolute;
+            top:1px;
+            left: 2px;
+        }
+        #right{
+            position: absolute;
+            top:1px;
+            right: -2px;
+        }
+        #dleft{
+            position: absolute;
+            bottom:1px;
+            left: 2px;
+        }
+        #dright{
+            position: absolute;
+            bottom:1px;
+            right: 2px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="dino ship">
+        <img src="./assets/dino ship.png" alt="" id="dinoship">
+    </div>
+    <div class="ship" id="left"></div>
+    <div class="ship" id="right"></div>
+    <div class="ship" id="dleft"></div>
+    <div class="ship"  id="dright"></div>
+
 </body>
 <script src="space.js"></script>
 </html>

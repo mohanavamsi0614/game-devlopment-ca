@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio src=""></audio>
 <div class="bg">
-    <div class="rectangle"><h1 align="center">Instrucsitions</h1>
-        <p>Press the Up-arrow key to jump </p>
-        <p>Press the space-ship at last of the dino run to go space</p>
-        <p>Click on the enieme ships to destroy them</p>
-
+    <div class="rectangle"><h1 align="center">Instructions</h1>
+        <p>Press the any key to jump.</p>
+        <p>Press the space-ship at last of the dino run to go space.</p>
+        <p>Click on the enieme ships to destroy them.</p>
+        <p>If the Points reached to 800 in dino race you can get a space-ship to fight with aliens in space</p>
     </div>
+    <button>Start the game!</button>
 </div>
 </body>
+<script>
+    const button=document.querySelector("button")
+    button.addEventListener("click",()=>{
+        location.replace("./race.html")
+    })
+    const sound=new Audio("./assets/jurassic_world.mp3")
+    sound.play()
+    sound.loop=true
+</script>
 </html>

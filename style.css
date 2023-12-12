@@ -1,6 +1,8 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 body{
     display: flex;
@@ -8,7 +10,9 @@ body{
     min-height: 100vh;
     justify-content: center;
 }
-
+img{
+    height: 100%;
+}
 .rectangle {
     position: fixed;
     width: 350px;
@@ -25,6 +29,10 @@ body{
     background-image: url("./assets/image.png");
     background-size: 100% 100%;
 }
+.rectangle p{
+    padding: 10px;
+    font-size: larger;
+}
 .grounds{
     width: 100%;
     border: 1px solid black;
@@ -33,13 +41,12 @@ body{
 }
 #dino{
     position: absolute;
-    height: 100px;
+    height: 105px;
     left: 10px;
-    bottom: 0px;
-    animation: jump 1s infinite linear;
+    top: 185px;
+    /* animation: jump .5s infinite linear; */
 }
 #block{
-    border: 1px solid black;
     width: 10%;
     position: absolute;
     height: 110px;
@@ -47,13 +54,74 @@ body{
     right: 10px; 
     animation: move 2s infinite linear;
 }
-
+#ground{
+    /* height: 10px; */
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+}
+img{
+    width: 100%;
+}
+.animate{
+    animation: jump 1.9s linear;
+}
+#ship{
+    position: absolute;
+    right: 20px;
+    display: none;
+    animation:moveup 3s 1 linear ;
+}
+#scores{
+    position: absolute;
+    top:10%;
+    left: 2%;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+h1{
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+#green{
+    background-color: rgba(22, 210, 107, 0.614);
+    box-shadow: rgb(55, 255, 0) 0px 1px 50px 2px;
+}
+button{
+    width: 270px;
+    height: 70px;
+    border-radius: 40px;
+    border: none;
+    background-color: rgba(220, 20, 60, 0.399);
+    color: white;
+    font-weight: 800;
+    position:absolute;
+    bottom: 15%;
+    left: 40%;
+    box-shadow: rgb(255, 0, 0) 0px 1px 50px 2px;
+    font-size: large;
+}
+button:hover{
+    box-shadow: rgb(255, 0, 0) 0px 0px 50px -12px;
+    font-size: x-large;
+}
 @keyframes jump{
     0%{
-        bottom: 0%;
+        top: 0px;
+    }
+    25%{
+        top:25px;
+        left:100px;
+    }
+    75%{
+        top:50px;
+        left: 230px;
     }
     100%{
-        bottom:35%;
+        top:185px;
+        left:10px;
     }
 }
 @keyframes move{
@@ -63,4 +131,16 @@ body{
     100%{
         left:-20px
     }
+}
+
+@keyframes moveup {
+    0%{
+        top:0px;
+    }
+    100%{
+        top:10%
+    }
+}
+@keyframes  {
+    
 }

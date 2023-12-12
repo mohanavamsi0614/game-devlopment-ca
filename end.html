@@ -7,11 +7,29 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body{
-            background-image: url("./assets/image 1.png");
+            background-image: url("./assets/dino end.webp");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height:100vh;
+        }
+        #win{
+            position: relative;
+            bottom: 3%;
+            /* width: 100%; */
         }
     </style>
 </head>
 <body>
-
+    <div id="win">
+    <img src="./assets/win.png" alt="" >
+    <h1>Hey! You saved lives today. Thank you</h1>
+    </div>
+    <button id="green">Want play again!</button>
 </body>
+<script>
+    const button=document.getElementById("green")
+    button.addEventListener("click",()=>{
+        location.replace("./race.html")
+    })
+</script>
 </html>
