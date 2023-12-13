@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url("./assets/lost.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height:100vh;
+        }
+        #win{
+            position: relative;
+            bottom: 3%;
+            /* width: 100%; */
+        }
+    </style>
+</head>
+<body>
+    <div id="win">
+    <img src="./assets/lose.png" alt="" height="0%">
+    </div>
+    <button id="green">Play again!</button>
+</body>
+<script>
+    const button=document.getElementById("green")
+    button.addEventListener("click",()=>{
+        location.replace("./race.html")
+    })
+</script>
+</html>
