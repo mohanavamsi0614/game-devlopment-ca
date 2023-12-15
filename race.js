@@ -16,14 +16,14 @@ addEventListener("keydown",()=>{
     dino.classList.add("animate");
 
     // removing the animation 
-        setTimeout(function(){
-            dino.classList.remove("animate");
-        },400);
+     setTimeout(function(){
+        dino.classList.remove("animate");
+    },400);
 })
 
 // genarating random character's in the game
 setInterval(()=>{
-    let random=Math.ceil(Math.random()*3)
+    let random=Math.ceil(Math.random()*2)
     block.innerHTML="<img src='./assets/block"+random+".png' alt='' height='100%'>"
     check()
 },4000)
@@ -31,7 +31,6 @@ setInterval(()=>{
 // checking the points it reached to 500 or not 
 const point=setInterval(()=>{
      if (cont>=500){
-        clearInterval(point)
         block.style.display="none"
         ship.style.display="block" //displaying the ship 
         document.getElementById("ground").innerHTML=`<img src='./assets/ro.png' alt=''>`
@@ -40,9 +39,7 @@ const point=setInterval(()=>{
         clearTimeout(inter)
         clearInterval(point)
      }   
-    cont++
-    score.innerHTML=cont
-},20)
+},1)
 
 //Checking for the collision  
 function check(){
@@ -61,12 +58,15 @@ function check(){
          }
         cont=0
         score.innerHTML=cont
-        sound.pause()
         sound1.play()
-        sound.play()
-        document.getElementById("ground").innerHTML=`<img src='./assets/ro.png' alt=''>`
+        sound.pause()
+        document.getElementById("ground").innerHTML=`<img src='./assets/ro.png' alt=''></img>`
         setTimeout(()=>{
         location.reload("./race.html")},700)
+    }
+    else{
+        cont++
+        score.innerHTML=cont
     }
 }
 const inter=setInterval(check,1)
