@@ -36,7 +36,6 @@ const point=setInterval(()=>{
         sound.pause()
         ship.style.width=50
         clearTimeout(inter)
-        clearInterval(point)
      }   
     cont++
     score.innerHTML=cont
@@ -44,7 +43,9 @@ const point=setInterval(()=>{
 
 //Checking for the collision  
 function check(){
-    if (block.getBoundingClientRect().left<=dino.getBoundingClientRect().left && dino.getBoundingClientRect().top>=330){
+    console.log(block.getBoundingClientRect().top+" "+dino.getBoundingClientRect().top )
+
+    if (block.getBoundingClientRect().left<=dino.getBoundingClientRect().left && dino.getBoundingClientRect().top>=400){
         block.style.animation="none"
         cont=0
         score.innerHTML=cont
@@ -52,10 +53,10 @@ function check(){
         sound1.play()
         document.getElementById("ground").innerHTML=`<img src='./assets/ro.png' alt=''>`
         setTimeout(()=>{
-        location.reload("./race.html")},7)
+        location.reload("./race.html")},700)
     }
 }
-const inter=setInterval(check,30)
+const inter=setInterval(check,0)
 
 
 //onclicking the ship redirecting to level-2(space war)
