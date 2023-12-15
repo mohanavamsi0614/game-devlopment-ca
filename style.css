@@ -13,12 +13,12 @@ body{
 img{
     height: 100%;
 }
-.rectangle {
-    position: fixed;
-    width: 350px;
-    height: 350px;
+.instructions {
+    position: absolute;
+    width: 25%;
+    height: auto;
     top: 0;
-    right: 10px;
+    right: 1%;
     background-color: #009cf753;
     border-radius: 30px;
     color: white;
@@ -27,12 +27,13 @@ img{
     width: 100%;
     height:100vh;
     background-image: url("./assets/image.png");
-    background-size: 100% 100%;
+    background-size:100% 100%;
 }
-.rectangle p{
+.instructions p{
     padding: 10px;
-    font-size: larger;
+    font-size: 100%;
 }
+
 .grounds{
     width: 100%;
     border: 1px solid black;
@@ -44,7 +45,6 @@ img{
     height: 105px;
     left: 10px;
     top: 185px;
-    /* animation: jump .5s infinite linear; */
 }
 #block{
     width: 10%;
@@ -55,7 +55,6 @@ img{
     animation: move 2s infinite linear;
 }
 #ground{
-    /* height: 10px; */
     position: absolute;
     bottom: -150px;
     width: 100%;
@@ -75,7 +74,7 @@ img{
 #scores{
     position: absolute;
     top:10%;
-    left: 2%;
+    right: 2%;
     font-size: xx-large;
     font-weight: bolder;
     color: whitesmoke;
@@ -88,12 +87,90 @@ h1{
 #green{
     background-color: rgba(22, 210, 107, 0.614);
     box-shadow: rgb(55, 255, 0) 0px 1px 50px 2px;
+    margin-top: 60px;
+}
+
+#dinoship{
+    position: absolute;
+    width: 200px;
+    height: auto;
+}
+.villain{
+    position: absolute;
+    width: 200px;
+    height: auto;
+}
+.ship{
+    margin: 500px;
+    margin-bottom: 600px;
+}
+
+.name{
+    background-color: rgba(255, 255, 255, 0.252);
+    width: 240px;
+    height: 130px;
+    padding: 20px;
+    border-radius: 15%;
+}
+input{
+    height: 35px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+    text-indent: 20px;
+}
+input::placeholder{
+    text-align: center;
+    color: black;
+}
+#button{
+    width: 270px;
+    height: 70px;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: rgba(220, 20, 60, 0.399);
+    color: white;
+    font-weight: 800;
+    position:absolute;
+    bottom: 15%;
+    left: 40%;
+    box-shadow: rgb(255, 0, 0) 0px 1px 50px 2px;
+    font-size: large;
+}
+#button::placeholder{
+    color: white;
+}
+#button:hover{
+    box-shadow: rgb(255, 0, 0) 0px 0px 50px -12px;
+    font-size: x-large;
+}
+#space{
+    width: 100%;
+    height: 95vh;
+    cursor:url('https://img.informer.com/icons/png/32/113/113532.png') 16 16, crosshair;
+}
+form{
+    position:absolute;
+    bottom: 30%;
+    left: 40%;
+    font-weight: 700;
+    box-shadow: rgb(255, 255, 255) 0px 1px 50px 2px;
+    text-indent: 10px;
+}
+#timer{
+    position: absolute;
+    top: 3%;
+    left:5%;
+    color: wheat;
+    font-weight: 900;
+
 }
 button{
     width: 270px;
     height: 70px;
     border-radius: 40px;
-    border: none;
+    cursor: pointer;
     background-color: rgba(220, 20, 60, 0.399);
     color: white;
     font-weight: 800;
@@ -107,16 +184,35 @@ button:hover{
     box-shadow: rgb(255, 0, 0) 0px 0px 50px -12px;
     font-size: x-large;
 }
-#dinoship{
-    position: absolute;
-    width: 200px;
+#midlle{
+    position:absolute;
+    width: 50%;
     height: auto;
-    /* transform:; */
+    bottom: 50%;
+    left: 25%;
 }
-.villain{
-    position: absolute;
-    width: 200px;
-    height: auto;
+#speaker{
+    color: black;
+    width: 10%;
+    border: none;
+    left:3%;
+    top: 3%;
+    background-color: rgba(255, 255, 0, 0.532);
+    box-shadow: rgb(255, 213, 0) 0px 1px 50px 2px;
+}
+#lose{
+    position: relative;
+    bottom: 5%;
+}
+.message{
+    font-size: xx-large;
+    color: white;
+    font-weight: 900;
+    text-shadow: 6px 7px 7px rgba(0, 0, 0, 1);
+}
+#win{
+    position: relative;
+    bottom: 3%;
 }
 @keyframes jump{
     0%{
@@ -146,10 +242,13 @@ button:hover{
 
 @keyframes moveup {
     0%{
-        top:0px;
+        transform: translateX(5px);
+        }
+    50%{
+        transform: translateX(-5px);
     }
     100%{
-        top:10%
+        transform: translateX(5px);
     }
 }
 @keyframes enemey1 {
@@ -209,18 +308,18 @@ button:hover{
 @keyframes enemey4 {
     0%{
         top:0px;
-        left:0px ;
+        right:0px ;
     }
     50%{
         top: 100px;
-        left: 100px;
+        right: 100px;
     }
     75%{
         top: 270px;
-        left: 365px;
+        right: 150px;
     }
     100%{
-        top: 692px;
-        left: 650px;
-    }
+        top: 682px;
+        right: 850px;
+    } 
 }

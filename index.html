@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dino-War</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio src=""></audio>
+    <button id="speaker">Music</button>
 <div class="bg">
-    <div class="rectangle"><h1 align="center">Instructions</h1>
-        <p>Press the any key to jump.</p>
+    <img src="./assets/title.png" alt="" id="midlle">
+    <!-- instructions box -->
+    <div class="instructions"><h1 align="center">Instructions</h1>
+        <p>Press any key to jump.</p>
         <p>Press the space-ship at last of the dino run to go space.</p>
+        <p>If the Points reached to 500 in dino race you can get a space-ship to fight with aliens in space</p>
         <p>Click on the enieme ships to destroy them.</p>
-        <p>If the Points reached to 800 in dino race you can get a space-ship to fight with aliens in space</p>
+        <p>survive in the space for 1min to win!</p>
+        <p><b>You will have only one chance to play the space war if you failed you need to start from beginning</b></p>
     </div>
-    <button>Start the game!</button>
+    <!-- name and nick name inputs-->
+    <form action="" class="name">
+        <span>Name:</span>
+        <br>
+        <input type="text" placeholder="Name" id="name">
+        <br>
+        <span>Nick Name</span>
+        <br>
+        <input type="text" name="" id="Nickname" placeholder="nickname">
+    </form>
+    <!-- start game button -->
+    <button id="button">Start Game!</button>
+
 </div>
 </body>
-<script>
-    const button=document.querySelector("button")
-    button.addEventListener("click",()=>{
-        location.replace("./race.html")
-    })
-    const sound=new Audio("./assets/jurassic_world.mp3")
-    sound.play()
-    sound.loop=true
+<script src="app.js"> 
 </script>
 </html>
