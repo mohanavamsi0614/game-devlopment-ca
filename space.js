@@ -25,6 +25,7 @@ const random = () => {
 };
 
 // created a fuction for genarating ship genarating random ship's in the game
+addEventListener("DOMContentLoaded",()=>{
 function ship() {
   const img = document.createElement("img");
   img.src = `./assets/ship${random()}.png`;
@@ -52,7 +53,7 @@ function check(){
 
 // checking collision for every 30 milli seconds
 setInterval(check,30)}
-
+})
 // giving a feature to play and stop the music
 const speaker=document.getElementById("speaker")
 let mute=false
