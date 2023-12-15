@@ -7,9 +7,9 @@
 body{
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
 }
 img{
     height: 100%;
@@ -22,7 +22,7 @@ img{
     top: 0;
     right: 1%;
     background-color: #009cf753;
-    border-radius: 30px;
+    border-radius: 10%;
     color: white;
 }
 .bg{
@@ -105,12 +105,18 @@ h1{
     margin-bottom: 600px;
 }
 
-.name{
+.inputbox{
     background-color: rgba(255, 255, 255, 0.252);
-    width: 240px;
+    width: 250px;
     height: 130px;
     padding: 20px;
     border-radius: 15%;
+    position:absolute;
+    bottom: 25%;
+    left: 40%;
+    font-weight: 700;
+    box-shadow: rgb(255, 255, 255) 0px 1px 50px 2px;
+    text-indent: 10px;
 }
 input{
     height: 35px;
@@ -130,18 +136,10 @@ input::placeholder{
     height: 95vh;
     cursor:url(https://cdn.custom-cursor.com/db/16928/32/cartoons-mao-mao-badgerclops-robo-arm-cursor.png) , auto;
 }
-form{
-    position:absolute;
-    bottom: 30%;
-    left: 40%;
-    font-weight: 700;
-    box-shadow: rgb(255, 255, 255) 0px 1px 50px 2px;
-    text-indent: 10px;
-}
 #timer{
     position: absolute;
     top: 3%;
-    left:5%;
+    right:5%;
     color: wheat;
     font-weight: 900;
 }
@@ -154,7 +152,7 @@ button{
     color: white;
     font-weight: 800;
     position:absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 40%;
     box-shadow: rgb(255, 0, 0) 0px 1px 50px 2px;
     font-size: large;
@@ -163,12 +161,12 @@ button:hover{
     box-shadow: rgb(255, 0, 0) 0px 0px 50px -12px;
     font-size: x-large;
 }
-#midlle{
+#title{
     position:absolute;
-    width: 50%;
+    width: 25%;
     height: auto;
-    bottom: 50%;
-    left: 25%;
+    bottom: 70%;
+    left: 35%;
 }
 #speaker{
     color: black;
@@ -296,4 +294,33 @@ button:hover{
         top: 682px;
         right: 850px;
     } 
+}
+@media all and (max-width:600px){
+    body{
+        width: 320px;
+        height: 720px;
+    }
+    .instructions{
+        display: none;
+    }
+    .inputbox{
+        width: 220px;
+        left: 10%;
+        bottom: 20%;
+    }
+    button{
+        width:150px ;
+        bottom: 5%;
+        left: 33%;
+    }
+    #speaker{
+        width: 100px;
+        height: 50px;
+    }
+    #title{
+        width: 70%;
+        left: 25%;
+    }
+   
+
 }

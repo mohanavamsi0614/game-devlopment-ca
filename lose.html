@@ -31,6 +31,8 @@
     let sound=new Audio("./assets/jurassic_world.mp3")
     sound.loop=true
     sound.play()
+    document.getElementById("title").innerHTML=`Hey ${localStorage.getItem("name")} You Lost :(`
+
     const speaker=document.getElementById("speaker")
     let mute=false
     // And giving a feature to play and stop the music

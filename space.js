@@ -28,9 +28,16 @@ const random = () => {
 addEventListener("DOMContentLoaded",()=>{
 function ship() {
   const img = document.createElement("img");
+  let ani=random()
+  img.style.animation = `enemey${ani} 3s linear`;
+  if (ani%2==0){
   img.src = `./assets/ship${random()}.png`;
+  }
+  else{
+    img.src = `./assets/rev boat-${random()}.png`;
+
+  }
   img.classList.add("villain");
-  img.style.animation = `enemey${random()} 3s linear`;
   space.appendChild(img);
 
   // givening an event when we click the enemy ship to destory it
@@ -40,7 +47,6 @@ function ship() {
     ship()
   };
 
-  // checking for collinson
   check()
 
   // created a function for checking collision's
@@ -53,7 +59,11 @@ function check(){
 
 // checking collision for every 30 milli seconds
 setInterval(check,30)}
+
+ //calling the first ship to the ground
+ship()
 })
+
 // giving a feature to play and stop the music
 const speaker=document.getElementById("speaker")
 let mute=false
@@ -66,5 +76,5 @@ if (!mute){
 else{
     sound.play()
     mute=false
-}})
-ship() //calling the first ship to the ground
+}
+})

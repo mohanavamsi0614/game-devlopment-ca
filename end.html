@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hey You Won!</title>
+    <title id="title"></title>
     <link rel="stylesheet" href="style.css">
     <style>
         body{
@@ -33,6 +33,7 @@
     let sound=new Audio("./assets/jurassic_world.mp3")
     sound.loop=true
     sound.play()
+    document.getElementById("title").innerHTML=`Hey ${localStorage.getItem("name")} You Won!`
     const speaker=document.getElementById("speaker")
     let mute=false
 // And giving a feature to play and stop the music

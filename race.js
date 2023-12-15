@@ -2,9 +2,8 @@
 const dino=document.getElementById("dino")
 const block=document.getElementById("block")
 const ship=document.getElementById("ship")
-let cont=0
-const score=document.getElementById("score")
-
+let seconds=0
+const time=document.getElementById("time")
 // adding sounds for the game
 const sound1=new Audio("./assets/die.wav")
 const sound=new Audio("./assets/running.mp3")
@@ -27,19 +26,20 @@ setInterval(()=>{
     block.innerHTML="<img src='./assets/block"+random+".png' alt='' height='100%'>"
 },4000)
 
-// checking the points it reached to 500 or not 
-const point=setInterval(()=>{
-     if (cont>=500){
-        clearInterval(point)
+const timer=setInterval(()=>{
+    if (seconds==35){
         block.style.display="none"
         ship.style.display="block" //displaying the ship 
         sound.pause()
         ship.style.width=50
-        clearTimeout(inter)
-     }   
-    cont++
-    score.innerHTML=cont
-},0)
+        clearInterval(inter)
+        clearInterval(timer)
+    }
+    time.innerHTML=seconds
+    seconds++
+},1000)
+// checking the points it reached to 500 or not 
+
 
 //Checking for the collision  
 function check(){
@@ -48,7 +48,6 @@ function check(){
     if (block.getBoundingClientRect().left<=dino.getBoundingClientRect().left && dino.getBoundingClientRect().top>=340){
         block.style.animation="none"
         cont=0
-        score.innerHTML=cont
         sound.pause()
         sound1.play()
         document.getElementById("ground").innerHTML=`<img src='./assets/ro.png' alt=''>`
