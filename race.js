@@ -40,7 +40,7 @@ const point=setInterval(()=>{
      }   
     cont++
     score.innerHTML=cont
-},20)
+},0)
 
 //Checking for the collision  
 function check(){
@@ -50,10 +50,9 @@ function check(){
         score.innerHTML=cont
         sound.pause()
         sound1.play()
-        sound.play()
         document.getElementById("ground").innerHTML=`<img src='./assets/ro.png' alt=''>`
         setTimeout(()=>{
-        location.reload("./race.html")},700)
+        location.reload("./race.html")},7)
     }
 }
 const inter=setInterval(check,30)
