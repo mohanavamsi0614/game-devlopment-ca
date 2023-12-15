@@ -1,5 +1,6 @@
-const sound=new Audio("./assets/jurassic_world.mp3")
+let sound=new Audio("./assets/salaar.mp3")
 sound.loop=true //to Get the background music continuously
+// sound.autoplay=true
 sound.play()
 const button=document.querySelector("#button")
     button.addEventListener("click",()=>{

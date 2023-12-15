@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hey You Won!</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body{
@@ -16,8 +16,9 @@
     </style>
 </head>
 <body>
+
     <button id="speaker">Music</button>
-    <div id="win">
+    <div class="result">
     <img src="./assets/win.png" alt="" >
     <h1 class="message">Hey! You saved lives today. Thank you</h1>
     </div>
@@ -29,5 +30,20 @@
     button.addEventListener("click",()=>{
         location.replace("./index.html")
     })
+    let sound=new Audio("./assets/jurassic_world.mp3")
+    sound.loop=true
+    sound.play()
+    const speaker=document.getElementById("speaker")
+    let mute=false
+// And giving a feature to play and stop the music
+    speaker.addEventListener("click",()=>{
+    if (!mute){
+        sound.pause()
+        mute=true
+    }
+    else{
+        sound.play()
+        mute=false
+    }})
 </script>
 </html>

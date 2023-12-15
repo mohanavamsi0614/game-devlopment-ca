@@ -16,7 +16,7 @@
 </head>
 <body>
     <button id="speaker">Music</button>
-    <div id="lose">
+    <div class="result">
         <p class="message"></p>
     <img src="./assets/lose.png" alt="" height="0%">
     </div>
@@ -28,5 +28,20 @@
     button.addEventListener("click",()=>{
         location.replace("./index.html")
     })
+    let sound=new Audio("./assets/jurassic_world.mp3")
+    sound.loop=true
+    sound.play()
+    const speaker=document.getElementById("speaker")
+    let mute=false
+    // And giving a feature to play and stop the music
+    speaker.addEventListener("click",()=>{
+    if (!mute){
+        sound.pause()
+        mute=true
+    }
+    else{
+        sound.play()
+        mute=false
+    }})
 </script>
 </html>
