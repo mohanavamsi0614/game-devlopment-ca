@@ -49,6 +49,7 @@ function check(){
         block.style.animation="none"
         cont=0
         score.innerHTML=cont
+        clearTimeout(inter)
         sound.pause()
         sound1.play()
         document.getElementById("ground").innerHTML=`<img src='./assets/ro.png' alt=''>`
