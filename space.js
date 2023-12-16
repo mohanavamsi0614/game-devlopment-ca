@@ -25,7 +25,7 @@ const random = () => {
 };
 
 // created a fuction for genarating ship genarating random ship's in the game
-addEventListener("DOMContentLoaded",()=>{
+addEventListener("load",()=>{
 function ship() {
   const img = document.createElement("img");
   let ani=random()

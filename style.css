@@ -12,8 +12,10 @@ body{
     width: 100vw;
 }
 img{
-    height: 100%;
     width: 100%;
+}
+.height{
+    height: 100%;
 }
 .instructions {
     position: absolute;
