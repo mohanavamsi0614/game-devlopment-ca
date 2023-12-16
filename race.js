@@ -45,10 +45,11 @@ const timer=setInterval(()=>{
 function check(){
     console.log(block.getBoundingClientRect().top+" "+dino.getBoundingClientRect().top )
 
-    if (block.getBoundingClientRect().left<=dino.getBoundingClientRect().left && dino.getBoundingClientRect().top>=340){
+    if (block.getBoundingClientRect().left<=dino.getBoundingClientRect().left && 
+    dino.getBoundingClientRect().top>=340){
         block.style.animation="none"
         cont=0
-        score.innerHTML=cont
+        time.innerHTML=cont
         clearTimeout(inter)
         sound.pause()
         sound1.play()

@@ -78,4 +78,3 @@ else{
     mute=false
 }
 })
-ship() //calling the first ship to the ground
