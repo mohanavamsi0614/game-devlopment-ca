@@ -18,7 +18,7 @@ const button=document.querySelector("#button")
         }
     })
 const speaker=document.getElementById("speaker")
-let mute=false
+let mute=falsead
 // And giving a feature to play and stop the music
 speaker.addEventListener("click",()=>{
 if (!mute){
