@@ -24,8 +24,9 @@ const random = () => {
   return Math.ceil(Math.random() * 4);
 };
 
-// created a fuction for genarating ship genarating random ship's in the game
 addEventListener("load",()=>{
+  
+// created a fuction for genarating ship genarating random ship's in the game
 function ship() {
   const img = document.createElement("img");
   let ani=random()

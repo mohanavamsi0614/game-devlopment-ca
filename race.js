@@ -54,17 +54,14 @@ function check() {
     cont = 0;
     time.innerHTML = cont;
     clearTimeout(inter);
-    sound.pause();
     sound1.play();
-    document.getElementById(
-      "ground"
-    ).innerHTML = `<img src='./assets/ro.png' alt=''>`;
+    document.getElementById("ground").innerHTML = `<img src='./assets/ro.png' alt=''>`;
     setTimeout(() => {
       location.reload("./race.html");
     }, 700);
   }
 }
-const inter = setInterval(check, 0);
+const inter = setInterval(check,0);
 
 //onclicking the ship redirecting to level-2(space war)
 ship.addEventListener("click", () => {

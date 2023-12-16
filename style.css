@@ -95,11 +95,13 @@ h1{
     position: absolute;
     width: 200px;
     height: auto;
+    bottom: 20%;
 }
 .villain{
     position: absolute;
     width: 200px;
     height: auto;
+
 }
 .ship{
     margin: 500px;
