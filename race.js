@@ -48,6 +48,11 @@ function check(){
     if (block.getBoundingClientRect().left<=dino.getBoundingClientRect().left && dino.getBoundingClientRect().top>=340){
         block.style.animation="none"
         cont=0
+<<<<<<< HEAD
+=======
+        score.innerHTML=cont
+        clearTimeout(inter)
+>>>>>>> b0b0f3d7fbe66f9e94913a704c9ad8a18fbf4999
         sound.pause()
         sound1.play()
         document.getElementById("ground").innerHTML=`<img src='./assets/ro.png' alt=''>`

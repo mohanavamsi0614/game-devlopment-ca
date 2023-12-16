@@ -77,4 +77,9 @@ else{
     sound.play()
     mute=false
 }
+<<<<<<< HEAD
 })
+=======
+ship() //calling the first ship to the ground
+})
+>>>>>>> b0b0f3d7fbe66f9e94913a704c9ad8a18fbf4999
