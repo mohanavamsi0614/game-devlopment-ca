@@ -12,7 +12,7 @@ sound.play()
 // setting the timer in the game
 let t=0
 setInterval(()=>{
-    if (t>=60){
+    if (t==60){
         location.replace("./end.html")
     }
     timer.innerHTML=t
@@ -25,7 +25,7 @@ const random = () => {
 };
 
 addEventListener("load",()=>{
-  
+
 // created a fuction for genarating ship genarating random ship's in the game
 function ship() {
   const img = document.createElement("img");
