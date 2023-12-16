@@ -2,12 +2,15 @@ let sound=new Audio("./assets/salaar.mp3")
 sound.loop=true //to Get the background music continuously
 // sound.autoplay=true
 sound.play()
+
+// Givng a click event to the button to redirect the page from home to level 1(dino-run)
 const button=document.querySelector("#button")
     button.addEventListener("click",()=>{
         const nn=document.getElementById("name") //getting the information from the player and storeing in the local storage
         const name=document.getElementById("Nickname")
         if (name.value!="" ||name.value!="" ){ //ensuring that player given the information 
-            localStorage.setItem("name",name.value) // Givng a click event to the button to redirect the page from home to level 1(dino-run)
+            localStorage.setItem("name",name.value)
+            localStorage.speaker("nick",nn.value) 
             location.replace("./race.html")
         }
         else{
